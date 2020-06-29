@@ -1,0 +1,9 @@
+<script>
+    $(function () {
+      
+    $('.new').click(function () {
+        window.location.href = $(this).data('url');
+    });
+})
+</script>
+<input type="button" class="new" data-url="">
