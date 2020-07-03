@@ -16,3 +16,5 @@
             $fileNameToStore = $filename . '_' . time() . '.' . $extension;
             $path = $request->file('candidate_details')->storeAs('public/candidate_details', $fileNameToStore);
         }
+//file upload frontend
+<img src='/storage/' alt= />
