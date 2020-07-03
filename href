@@ -7,3 +7,12 @@
 })
 </script>
 <input type="button" class="new" data-url="">
+
+//file upload
+ if ($request->hasFile('candidate_details')) {
+            $filenameWithExt = $request->file('candidate_details')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('candidate_details')->getClientOriginalExtension();
+            $fileNameToStore = $filename . '_' . time() . '.' . $extension;
+            $path = $request->file('candidate_details')->storeAs('public/candidate_details', $fileNameToStore);
+        }
