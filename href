@@ -18,3 +18,23 @@
         }
 //file upload frontend
 <img src='/storage/' alt= />
+
+
+//custom paginate
+public function paginate($items, $perPage, $page, $options)
+    {
+        $page = $page ?: (Paginator::resolveCurrentPage() ?: 1);
+        $items = $items instanceof Collection ? $items : Collection::make($items);
+        return new LengthAwarePaginator($items->forPage($page, $perPage), $items->count(), $perPage, $page, $options);
+    }
+    
+//call paginate
+ $options = [
+            'path' => URL::current()
+        ];
+        $this->paginate(, 5, null, $options);
+        
+        
+ //fine anything from db using like
+ ::where('name', 'LIKE', "%{$query}%")
+ 
