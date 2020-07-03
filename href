@@ -47,3 +47,5 @@ public function paginate($items, $perPage, $page, $options)
     $('.js-example-basic-single').select2();
 });
     
+//remove null from array
+array_values(array_filter($array));
