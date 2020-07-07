@@ -49,3 +49,13 @@ public function paginate($items, $perPage, $page, $options)
     
 //remove null from array
 array_values(array_filter($array));
+
+//searchable dropbox
+$(document).ready(function() {
+    $('.js-example-basic-single').select2();
+});
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    call.js-example-basic-single in any select box
+
