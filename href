@@ -59,3 +59,5 @@ $(document).ready(function() {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     call.js-example-basic-single in any select box
 
+//get unique rows from table laravel
+$orders =  CustomOrder::distinct()->get(['order_id']);
